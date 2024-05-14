@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        function pali(n)
+            {
+                num = parseInt(n);
+                num1 = num;
+                rev=0;
+                rem=0;
+
+            while(num1!=0)
+            {
+                //  alert(rem);
+                rem = num1%10;
+                rev = rem + rev*10;
+                num1= parseInt(num1/10);
+            }
+
+            if(num==rev)
+            {
+                alert("The number "+num+" is a Palindrome number!");    
+            }    
+            else
+            {
+                alert("The number "+num+" is not a Palindrome number!");
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+    
+
+    <form name="frm" id="frm1">
+        <h1>1.Enter No:<input type="text" name="ntxt"/></h1>
+        <!-- 2.Enter No:<input type="text" name="ntxt"/><br/><br>
+        3.Enter No:<input type="text" name="ntxt"/><br/><br>
+        4.Enter No:<input type="text" name="ntxt"/><br/><br>
+        5.Enter No:<input type="text" name="ntxt"/><br/><br> -->
+        <input class="btn1" type="button" name="btn" value="Find Palindrome" onclick="pali(ntxt.value)"/>
+    </form>
+
+
+
+
+</body>
+</html>
